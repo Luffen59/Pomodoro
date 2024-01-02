@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pomodoro and 10 seconds break technique"
+version = "0.1.0"
+description = "Mixing a time management method and a learning technique for a better working and learning experience."
+authors = ["Lucas Fuchtner"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
