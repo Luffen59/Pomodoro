@@ -1,6 +1,6 @@
 from message import Message
 
-class Ten_second_message(Message):
+class TenSecondMessage(Message):
     def print_work_message(self, duration):
         print(f"Work")
 
