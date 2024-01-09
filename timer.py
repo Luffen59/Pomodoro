@@ -14,7 +14,7 @@ class Timer:
             time.sleep(self.break_duration)
 
     def do_work(self):
-        self.message_printer.print_work_message(self.work_duration)
+        pass
 
     def do_break(self):
-        self.message_printer.print_break_message(self.break_duration)
+        pass
