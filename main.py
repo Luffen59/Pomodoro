@@ -1,9 +1,9 @@
-from pomodoro_message import PomodoroMessage
-from tensecond_message import TenSecondMessage
-from pomodoro_timer import PomodoroTimer
-from tensecond_timer import TenSecondTimer
-from pomodoro_state import PomodoroState
-import time
+from Classes.pomodoro_message import PomodoroMessage
+from Classes.tensecond_message import TenSecondMessage
+from Classes.pomodoro_timer import PomodoroTimer
+from Classes.tensecond_timer import TenSecondTimer
+from Classes.pomodoro_state import PomodoroState
+
 import random
 import threading
 

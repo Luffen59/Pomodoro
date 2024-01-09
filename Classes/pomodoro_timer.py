@@ -1,4 +1,4 @@
-from timer import Timer
+from Classes.timer import Timer
 
 class PomodoroTimer(Timer):
     def __init__(self, work_duration, break_duration, message_printer, pomodoro_state):

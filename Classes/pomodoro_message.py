@@ -1,4 +1,4 @@
-from message import Message
+from Classes.message import Message
 
 class PomodoroMessage(Message):
     def print_work_message(self, duration):
