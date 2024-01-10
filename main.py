@@ -1,8 +1,10 @@
-from Classes.pomodoro_message import PomodoroMessage
-from Classes.tensecond_message import TenSecondMessage
-from Classes.pomodoro_timer import PomodoroTimer
-from Classes.tensecond_timer import TenSecondTimer
-from Classes.pomodoro_state import PomodoroState
+from Classes.message_pomodoro import PomodoroMessage
+from Classes.message_tensecond import TenSecondMessage
+from Classes.timer_pomodoro import PomodoroTimer
+from Classes.timer_tensecond import TenSecondTimer
+from Classes.state_pomodoro import PomodoroState
+from Classes.notification import Notification
+from Classes.find_OS import OSFinder
 
 import random
 import threading
@@ -10,8 +12,14 @@ import threading
 if __name__ == "__main__":
     pomodoro_state = PomodoroState()
 
-    pomodoro = PomodoroTimer(25, 5, PomodoroMessage(), pomodoro_state)
-    ten_seconds = TenSecondTimer(random.randint(3, 4), 1, TenSecondMessage(), pomodoro_state)
+    implementation = OSFinder().get_platform_implementation()
+
+    notification = Notification(implementation)
+
+    pomodoro = PomodoroTimer(25, 5, PomodoroMessage(notification), notification,
+                             pomodoro_state)
+    ten_seconds = TenSecondTimer(random.randint(3, 4), 1, TenSecondMessage(notification),
+                                 notification, pomodoro_state)
 
     pomodoro_thread = threading.Thread(target=pomodoro.run)
     ten_seconds_thread = threading.Thread(target=ten_seconds.run)

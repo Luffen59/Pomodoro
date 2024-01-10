@@ -1,8 +1,8 @@
 from Classes.timer import Timer
 
 class PomodoroTimer(Timer):
-    def __init__(self, work_duration, break_duration, message_printer, pomodoro_state):
-        super().__init__(work_duration, break_duration, message_printer)
+    def __init__(self, work_duration, break_duration, message_printer, notification, pomodoro_state):
+        super().__init__(work_duration, break_duration, message_printer, notification)
         self.pomodoro_state = pomodoro_state
 
     def do_work(self):
