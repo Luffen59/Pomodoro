@@ -2,15 +2,16 @@
 import tkinter as tk
 from tkinter import messagebox
 import pygame
-import time
 
 class Implementation:
     @staticmethod
-    def show_popup(title, message, duration=1):
+    def show_popup(title, message):
         root = tk.Tk()
-        root.withdraw()
-        messagebox.showinfo(title, message)
-        root.after(duration, root.destroy())
+        root.title(title)
+        label = tk.Label(root, text=message)
+        label.pack(padx=30, pady=40)
+        root.after(1800, root.destroy)
+        root.mainloop()
 
     @staticmethod
     def play_sound(sound_file):
